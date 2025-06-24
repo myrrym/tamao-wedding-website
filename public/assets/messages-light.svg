@@ -1,0 +1,31 @@
+<svg width="149" height="149" viewBox="0 0 149 149" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_54_169)">
+<circle cx="74.5" cy="74.5" r="58.5" fill="white"/>
+<circle cx="74.5" cy="74.5" r="58" stroke="#3D3D3D"/>
+</g>
+<path d="M98.6621 50H64.3086C63.9118 50.0001 63.5584 50.2338 63.3984 50.5859L63.3418 50.7432L57.292 73.5322C57.2052 73.8595 57.2899 74.2048 57.5107 74.4531L57.6133 74.5527L71.6035 86.3574C71.8784 86.5893 72.2533 86.6537 72.585 86.5352L72.7236 86.4727L95.6533 74.0908C95.8935 73.961 96.0682 73.7394 96.1406 73.4795L96.166 73.3662L99.6494 51.1553C99.7446 50.5487 99.276 50.0002 98.6621 50Z" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="36.2353" y2="-1" transform="matrix(-0.883116 0.469155 0.469155 0.883116 104 71)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="25.6125" y2="-1" transform="matrix(0.780869 0.624695 0.624695 -0.780869 53 70)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="9.21954" y2="-1" transform="matrix(-0.650791 -0.759257 -0.759257 0.650791 103 71)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="10.6301" y2="-1" transform="matrix(0.752577 -0.658505 -0.658505 -0.752577 52 69)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="5.65685" y2="-1" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 86 51)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="5.83095" y2="-1" transform="matrix(0.857493 -0.514496 -0.514496 -0.857493 78 49)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="33.541" y2="-1" transform="matrix(-0.178885 0.98387 0.98387 0.178885 104 70)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="33.9559" y2="-1" transform="matrix(-0.2356 0.97185 0.97185 0.2356 54 69)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="53.0094" y2="-1" transform="matrix(-0.999822 -0.0188646 -0.0188646 0.999822 98 103)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="24.8395" y2="-1" transform="matrix(0.644136 0.764911 0.764911 -0.644136 81 82)" stroke="#3D3D3D" stroke-width="2"/>
+<line y1="-1" x2="27.5862" y2="-1" transform="matrix(-0.724999 0.688749 0.688749 0.724999 66 83)" stroke="#3D3D3D" stroke-width="2"/>
+<defs>
+<filter id="filter0_d_54_169" x="0.6" y="0.6" width="147.8" height="147.8" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="6" operator="dilate" in="SourceAlpha" result="effect1_dropShadow_54_169"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="4.7"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_54_169"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_54_169" result="shape"/>
+</filter>
+</defs>
+</svg>
