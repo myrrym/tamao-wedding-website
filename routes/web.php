@@ -16,3 +16,7 @@ Route::get('/messages', function () {
 });
 
 Route::get('/memories', [MemoryController::class, 'index']); // Route to a specific method
+
+Route::get('/share-memory', function () {
+    return view('share-memory');
+});
