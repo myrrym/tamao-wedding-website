@@ -20,14 +20,14 @@
             }
             .messages {
                 height: 100dvh;
-                background-color: #007099;
+                background-color: #A7D8DE;
             }
             .memories {
                 height: 100dvh;
-                background-color: #E86049;
+                background-color: #F2B6AC;
             }
             .bar {
-                width: 3%;
+                width: 2%;
                 height: 100dvh;
                 position: absolute;
             }
@@ -38,22 +38,22 @@
                 box-shadow: 4px 0px 4px 0px rgba(0, 0, 0, 0.25);
             }
             .bar-messages-left {
-                background-color: #019BD3;
-                left: 44%;
+                background-color: #D4F1F9;
+                left: 46%;
             }
             .bar-messages-right {
-                background-color: #00BBFF;
-                left: 47%;
+                background-color: #E6EBF2;
+                left: 48%;
                 z-index: 50;
             }
             .bar-memories-left {
-                background-color: #EFD7D3;
+                background-color: #FCEDEA;
                 left: 50%;
                 z-index: 50;
             }
             .bar-memories-right {
-                background-color: #EA9080;
-                left: 53%;
+                background-color: #EFD7D3;
+                left: 52%;
             }
             @yield('style')
         </style>

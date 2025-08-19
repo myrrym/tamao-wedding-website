@@ -28,19 +28,19 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 20dvw;
+        width: 12dvw;
     }
     .img-messages-container {
         top: 50%;
-        left: 15%;
+        left: 19%;
         transform: translateY(-50%);
-        width: 14dvw;
+        width: 8dvw;
     }
     .img-memories-container {
         top: 50%;
-        left: 71%;
+        left: 73%;
         transform: translateY(-50%);
-        width: 14dvw;
+        width: 8dvw;
     }
 @endsection
 
@@ -60,7 +60,7 @@
         </div>
     </a>
 
-    <a href="">
+    <a href="/memories">
         <div class="img-container img-memories-container">
             <img src="assets/memories.svg" alt="Memories">
             <img src="assets/memories-light.svg" alt="Memories Light" class="img-light">

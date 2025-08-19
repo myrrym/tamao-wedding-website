@@ -13,3 +13,7 @@ Route::get('/thanks', function () {
 Route::get('/messages', function () {
     return view('messages');
 });
+
+Route::get('/memories', function () {
+    return view('memories');
+});
