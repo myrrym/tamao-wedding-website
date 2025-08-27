@@ -55,6 +55,20 @@
                 background-color: #EFD7D3;
                 left: 52%;
             }
+            .footer{
+                position: fixed;
+                bottom: 0;
+                background-color: #3D3D3D;
+                font-size: 12px;
+                color: #FFFFFF;
+                width: 100%;
+                z-index: 200;
+                padding: 0.5rem;
+                text-align: center;
+            }
+            .a-pink{
+                color: #EFD7D3;
+            }
             @yield('style')
         </style>
     </head>
@@ -74,6 +88,10 @@
 
             </div>
             @yield('content')
+        </div>
+
+        <div class="footer">
+            Designed and developed by <a class="a-pink" href="https://www.linkedin.com/in/miriam-ho-67b3711b1/">Miriam Ho Ai Ning</a> © 2025
         </div>
     </body>
 </html>

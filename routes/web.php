@@ -20,3 +20,7 @@ Route::get('/memories', [MemoryController::class, 'index']); // Route to a speci
 Route::get('/share-memory', function () {
     return view('share-memory');
 });
+
+Route::get('/share-message', function () {
+    return view('share-message');
+});

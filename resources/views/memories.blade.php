@@ -41,6 +41,7 @@
         width: 100%;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+        padding-bottom: 4rem;
     }
     .container-memory-card::-webkit-scrollbar{
         display: none;

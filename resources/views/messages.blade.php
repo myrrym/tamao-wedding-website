@@ -13,6 +13,7 @@
         width: 100%;
         -ms-overflow-style: none;  /* IE and Edge */
         scrollbar-width: none;  /* Firefox */
+        padding-bottom: 4rem;
     }
     .container-message-card::-webkit-scrollbar{
         display: none;
@@ -99,7 +100,7 @@
         </div>
     </a>
 
-    <a href="/write-message">
+    <a href="/share-message">
         <div class="img-messages">
             <img src="assets/write-messages.svg" alt="" class="img-write-messages">
             <img src="assets/write-messages-light.svg" alt="" class="img-write-messages-light">
