@@ -24,3 +24,7 @@ Route::get('/share-memory', function () {
 Route::get('/share-message', function () {
     return view('share-message');
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+});
