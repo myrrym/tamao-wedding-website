@@ -91,7 +91,7 @@
         </div>
 
         <div class="footer">
-            Designed and developed by <a class="a-pink" href="https://www.linkedin.com/in/miriam-ho-67b3711b1/">Miriam Ho Ai Ning</a> © 2025
+            Designed and developed by <a class="a-pink" target="_blank" href="https://www.linkedin.com/in/miriam-ho-67b3711b1/">Miriam Ho Ai Ning</a> © 2025
         </div>
     </body>
 </html>

@@ -183,9 +183,9 @@
                             id="memoryTextarea"
                             class="custom-textarea"
                             placeholder="Share your message..."
-                            maxlength="280"
+                            maxlength="250"
                             required></textarea>
-                        <div id="charCount" class="char-counter">0 / 280 characters</div>
+                        <div id="charCount" class="char-counter">0 / 250 characters</div>
                     </div>
                     
                 </div>
@@ -205,7 +205,7 @@
 
         textarea.addEventListener("input", () => {
             const length = textarea.value.length;
-            charCount.textContent = `${length} / 280 characters`;
+            charCount.textContent = `${length} / 250 characters`;
         });
     </script>
 
