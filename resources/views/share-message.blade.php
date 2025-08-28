@@ -152,47 +152,59 @@
                     <div class="header">leave us a message</div>
                 </div>
 
-                <div class="form-card">
+                <form action="{{ route('share-messages.store') }}" method="POST">
+                    @csrf
 
-                    <div class="row mb-4">
-                        <div class="col-3">
-                            From:
+                    <div class="form-card">
+
+                        <div class="row mb-4">
+                            <div class="col-3">
+                                From:
+                            </div>
+                            <div class="col-9">
+                                <input name="from" type="text" class="input-from" placeholder="Your name" required>
+                            </div>
                         </div>
-                        <div class="col-9">
-                            <input type="text" class="input-from" placeholder="Your name" required>
+
+                        <div class="row mb-4">
+                            <div class="col-3">
+                                To:
+                            </div>
+                            <div class="col-9">
+                                <input name="to" type="text" class="input-from" placeholder="Ashaari / Miriam / both if you swing that way" required>
+                            </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                Message:
+                            </div>
+                        </div>
+
+                        <div class="textarea-wrapper">
+                            <textarea
+                                id="memoryTextarea"
+                                name="message"
+                                class="custom-textarea"
+                                placeholder="Share your message..."
+                                maxlength="255"
+                                required></textarea>
+                            <div id="charCount" class="char-counter">0 / 255 characters</div>
+                        </div>
+                        
                     </div>
 
-                    <div class="row mb-4">
-                        <div class="col-3">
-                            To:
-                        </div>
-                        <div class="col-9">
-                            <input type="text" class="input-from" placeholder="Ashaari / Miriam / both if you swing that way" required>
-                        </div>
+                    <div class="container-btn-submit-memory">
+                        <button type="submit" class="btn-submit-memory">share message</button>
                     </div>
+                
+                </form>
 
-                    <div class="row">
-                        <div class="col-12">
-                            Message:
-                        </div>
+                @if(session('success'))
+                    <div class="alert alert-success" style="text-align:center; margin-top:10px;">
+                        {{ session('success') }}
                     </div>
-
-                    <div class="textarea-wrapper">
-                        <textarea
-                            id="memoryTextarea"
-                            class="custom-textarea"
-                            placeholder="Share your message..."
-                            maxlength="250"
-                            required></textarea>
-                        <div id="charCount" class="char-counter">0 / 250 characters</div>
-                    </div>
-                    
-                </div>
-
-                <div class="container-btn-submit-memory">
-                    <div class="btn-submit-memory">share message</div>
-                </div>
+                @endif
 
             </div>
         </div>
@@ -205,7 +217,7 @@
 
         textarea.addEventListener("input", () => {
             const length = textarea.value.length;
-            charCount.textContent = `${length} / 250 characters`;
+            charCount.textContent = `${length} / 255 characters`;
         });
     </script>
 

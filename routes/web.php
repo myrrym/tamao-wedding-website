@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\MemoryController; // Import the controller class
+use App\Http\Controllers\MemoryController;
+use App\Http\Controllers\SubmitMessageController;
 
 Route::get('/', function () {
     return view('landing');
@@ -28,3 +29,5 @@ Route::get('/share-message', function () {
 Route::get('/admin', function () {
     return view('admin');
 });
+
+Route::post('/share-messages', [SubmitMessageController::class, 'store'])->name('share-messages.store');
