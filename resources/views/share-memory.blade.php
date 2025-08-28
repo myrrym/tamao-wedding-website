@@ -68,7 +68,7 @@
         outline: none;
     }
     /* Hide default input */
-    #images {
+    #image {
         display: none;
     }
     /* Custom button */
@@ -136,38 +136,49 @@
                     <div class="header">share a memory with us</div>
                 </div>
 
-                <div class="form-card">
+                <form action="{{ route('share-memories.store') }}" method="POST" enctype="multipart/form-data">
+                    @csrf
 
-                    <div class="row mb-4">
-                        <div class="col-3">
-                            From:
-                        </div>
-                        <div class="col-9">
-                            <input type="text" class="input-from" placeholder="Your name" required>
-                        </div>
-                    </div>
+                    <div class="form-card">
 
-                    <div class="row">
-                        <div class="col-12">
-                            Photo upload:
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="image-upload-wrapper">
-                                <label for="images" class="custom-file-label">choose images</label>
-                                <input type="file" id="images" name="images[]" accept="image/*" multiple required>
-                                <div id="preview" class="preview-container"></div>
+                        <div class="row mb-4">
+                            <div class="col-3">
+                                From:
+                            </div>
+                            <div class="col-9">
+                                <input name="from" type="text" class="input-from" placeholder="Your name" required>
                             </div>
                         </div>
-                    </div>
-                    
-                </div>
 
-                <div class="container-btn-submit-memory">
-                    <div class="btn-submit-memory">submit memory</div>
-                </div>
+                        <div class="row">
+                            <div class="col-12">
+                                Photo upload:
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="image-upload-wrapper">
+                                    <label for="image" class="custom-file-label">choose image (limit of 1000KB)</label>
+                                    <input type="file" id="image" name="image" accept="image/*" required>
+                                    <div id="preview" class="preview-container"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="container-btn-submit-memory">
+                        <button tyep="submit" class="btn-submit-memory">submit memory</button>
+                    </div>
+                
+                </form>
+
+                @if(session('success'))
+                    <div class="alert alert-success" style="text-align:center; margin-top:10px;">
+                        {{ session('success') }}
+                    </div>
+                @endif
 
             </div>
         </div>
@@ -175,7 +186,7 @@
     </div>
 
     <script>
-        document.getElementById("images").addEventListener("change", function(event) {
+        document.getElementById("image").addEventListener("change", function(event) {
             const preview = document.getElementById("preview");
             preview.innerHTML = ""; // clear old thumbnails
             

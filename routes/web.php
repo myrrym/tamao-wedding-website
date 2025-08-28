@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MemoryController;
 use App\Http\Controllers\SubmitMessageController;
+use App\Http\Controllers\ShareMemoryController;
 
 Route::get('/', function () {
     return view('landing');
@@ -31,3 +32,4 @@ Route::get('/admin', function () {
 });
 
 Route::post('/share-messages', [SubmitMessageController::class, 'store'])->name('share-messages.store');
+Route::post('/share-memories', [ShareMemoryController::class, 'store'])->name('share-memories.store');
