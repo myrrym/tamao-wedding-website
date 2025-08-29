@@ -15,9 +15,7 @@ Route::get('/thanks', function () {
     return view('thanks');
 });
 
-Route::get('/messages', function () {
-    return view('messages');
-});
+Route::get('/messages', [MessageController::class, 'index'])->name('messages.index');
 
 Route::get('/memories', [MemoryController::class, 'index']); // Route to a specific method
 

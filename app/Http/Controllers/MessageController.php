@@ -7,6 +7,14 @@ use App\Models\SubmitMessage;
 
 class MessageController extends Controller
 {
+    public function index()
+    {
+        // Only get approved messages
+        $messages = SubmitMessage::where('approved_flag', 1)->latest()->get();
+
+        return view('messages', compact('messages'));
+    }
+    
     public function approve($id)
     {
         $message = SubmitMessage::findOrFail($id);
