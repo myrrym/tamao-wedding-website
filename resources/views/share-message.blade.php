@@ -54,7 +54,7 @@
     }
     .form-card{
         margin-top: 5%;
-        background-image: url('assets/thanks-paper.svg');
+        background-image: {{Storage::url('assets/thanks-paper.svg')}};
         background-repeat: no-repeat;
         background-size: cover;
         padding: 4% 8%;
@@ -138,8 +138,8 @@
 
     <a href="/">
         <div class="img-logo">
-            <img src="assets/logo.svg" alt="Logo" class="logo-default">
-            <img src="assets/logo-light.svg" alt="Logo Light" class="logo-light">
+            <img src={{ Storage::disk('s3')->url("assets/logo.svg") }} alt="Logo" class="logo-default">
+            <img src={{ Storage::disk('s3')->url("assets/logo-light.svg") }} alt="Logo Light" class="logo-light">
         </div>
     </a>
 

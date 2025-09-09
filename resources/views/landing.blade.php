@@ -48,22 +48,22 @@
 
     <a href="/messages">
         <div class="img-container img-messages-container">
-            <img src="assets/messages.svg" alt="Messages">
-            <img src="assets/messages-light.svg" alt="Messages Light" class="img-light">
+            <img src='{{Storage::url("assets/messages.svg")}}' alt="Messages">
+            <img src='{{Storage::url("assets/messages-light.svg")}}' alt="Messages Light" class="img-light">
         </div>
     </a>
 
     <a href="/thanks">
         <div class="img-container img-logo-container">
-            <img src="assets/logo.svg" alt="Logo">
-            <img src="assets/logo-light.svg" alt="Logo Light" class="img-light">
+            <img src='{{Storage::url("assets/logo.svg")}}' alt="Logo">
+            <img src='{{Storage::url("assets/logo-light.svg")}}' alt="Logo Light" class="img-light">
         </div>
     </a>
 
     <a href="/memories">
         <div class="img-container img-memories-container">
-            <img src="assets/memories.svg" alt="Memories">
-            <img src="assets/memories-light.svg" alt="Memories Light" class="img-light">
+            <img src='{{Storage::url("assets/memories.svg")}}' alt="Memories">
+            <img src='{{Storage::url("assets/memories-light.svg")}}' alt="Memories Light" class="img-light">
         </div>
     </a>
     

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Ashaari & Miriam</title>
-    <link rel="icon" type="image/x-icon" href="assets/logo.svg">
+    <link rel="icon" type="image/x-icon" href={{ Storage::disk('s3')->url("assets/logo.svg") }}>
 
     @vite(['resources/css/app.scss', 'resources/js/app.js'])
     <style>

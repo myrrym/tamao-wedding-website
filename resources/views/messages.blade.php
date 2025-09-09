@@ -24,7 +24,7 @@
     }
     .message-card{
         text-align: center;
-        background-image: url('assets/thanks-paper.svg');
+        background-image: {{Storage::url('assets/thanks-paper.svg')}};
         background-repeat: no-repeat;
         background-size: cover;
         width: 34dvw;
@@ -95,15 +95,15 @@
 
     <a href="/">
         <div class="img-logo">
-            <img src="assets/logo.svg" alt="Logo" class="logo-default">
-            <img src="assets/logo-light.svg" alt="Logo Light" class="logo-light">
+            <img src='{{Storage::url("assets/logo.svg")}}' alt="Logo" class="logo-default">
+            <img src='{{Storage::url("assets/logo-light.svg")}}' alt="Logo Light" class="logo-light">
         </div>
     </a>
 
     <a href="/share-message">
         <div class="img-messages">
-            <img src="assets/write-messages.svg" alt="" class="img-write-messages">
-            <img src="assets/write-messages-light.svg" alt="" class="img-write-messages-light">
+            <img src='{{Storage::url("assets/write-messages.svg")}}' alt="" class="img-write-messages">
+            <img src='{{Storage::url("assets/write-messages-light.svg")}}' alt="" class="img-write-messages-light">
         </div>
     </a>
 

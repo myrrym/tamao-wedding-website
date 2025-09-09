@@ -86,21 +86,48 @@
         opacity: 0;
         transition: opacity 0.3s ease-in-out;
     }
+    .container-header {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .header{
+        background-color: #FFFFFF;
+        font-size: 24px;
+        display: inline-block;
+        padding: 0.25em 0.5em;
+        box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    }
+    .container-video {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 2rem;
+    }
+    .container-video video {
+        width: 80%;
+        max-width: 1000px;
+        height: auto;
+        border: 0.4rem solid #FFFFFF;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    }
+    .container-video video:fullscreen {
+        border: none;
+        box-shadow: none;
+    }
 @endsection
 
 @section('content')
 
     <a href="/">
         <div class="img-logo">
-            <img src="assets/logo.svg" alt="Logo" class="logo-default">
-            <img src="assets/logo-light.svg" alt="Logo Light" class="logo-light">
+            <img src='{{Storage::url("assets/logo.svg")}}' alt="Logo" class="logo-default">
+            <img src='{{Storage::url("assets/logo-light.svg")}}' alt="Logo Light" class="logo-light">
         </div>
     </a>
 
     <a href="/share-memory">
         <div class="img-memory">
-            <img src="assets/share-memory.svg" alt="" class="img-share-memory">
-            <img src="assets/share-memory-light.svg" alt="" class="img-share-memory-light">
+            <img src='{{Storage::url("assets/share-memory.svg")}}' alt="" class="img-share-memory">
+            <img src='{{Storage::url("assets/share-memory-light.svg")}}' alt="" class="img-share-memory-light">
         </div>
     </a>
 
@@ -111,17 +138,56 @@
             <div class="row">
 
                 <div class="offset-2 col-8">
+
+                    <div class="row">
+                        <div class="container-header">
+                            <div class="header">Our Misadventures | 16.11.2019 - 31.8.2024</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container-header">
+                            <div class="header">Our Wedding Video (thank you Ben and Oscar) | 1.9.2024</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container-video">
+                            <video width="320" height="240" controls>
+                                <source src="{{ Storage::url('assets/memories_video/Ashaari And Miriam FINAL 06102024.mp4') }}" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container-header">
+                            <div class="header">Our Wedding Photos (thank you Yen Khai) | 1.9.2024</div>
+                        </div>
+                    </div>
                         
                     <div class="row">
 
                         @foreach ($images as $image)
                             <div class="col-6 parent-memory-card">
                                 <div class="memory-card">
-                                    <img src="{{ asset($image) }}" alt="Memory" class="memory-card-img">
+                                    <img src="{{ Storage::disk('s3')->url($image) }}" alt="Memory" class="memory-card-img">
                                 </div>
                             </div>
                         @endforeach
             
+                    </div>
+
+                    <div class="row">
+                        <div class="container-header">
+                            <div class="header">MORE Misadventures | 1.9.2024 onwards</div>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="container-header">
+                            <div class="header">Memories Sent In</div>
+                        </div>
                     </div>
 
                 </div>

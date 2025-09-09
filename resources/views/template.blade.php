@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/x-icon" href="assets/logo.svg">
+        <link rel="icon" type="image/x-icon" href='{{Storage::url("assets/logo.svg")}}'>
 
         @vite(['resources/css/app.scss', 'resources/js/app.js'])
 
