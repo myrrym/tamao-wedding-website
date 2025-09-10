@@ -1,0 +1,19 @@
+#!/bin/sh
+# .docker/php/docker-healthcheck
+
+# This script checks if the PHP-FPM process is responsive.
+# It uses cgi-fcgi to send a request to the FPM status endpoint.
+
+# Set the environment variable for cgi-fcgi
+export SCRIPT_NAME=/ping
+export SCRIPT_FILENAME=/ping
+export REQUEST_METHOD=GET
+
+# Check if the FPM status path is reachable
+if cgi-fcgi -bind -connect 127.0.0.1:9000 | grep -q "pong"; then
+    echo "FPM is responsive."
+    exit 0
+else
+    echo "FPM is not responding."
+    exit 1
+fi

@@ -1,0 +1,25 @@
+# Git
+.git/
+.gitignore
+
+# Docker
+# .docker/
+Dockerfile
+.dockerignore
+
+# Dependencies
+node_modules/
+vendor/
+
+# Laravel / Environment
+.env
+.env.*
+storage/framework/sessions/*
+storage/framework/cache/data/*
+storage/logs/*.log
+public/storage
+public/hot
+
+# OS files
+.DS_Store
+Thumbs.db
